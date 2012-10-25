@@ -7,11 +7,15 @@ You'll end up with a running EC2 instance with all the configuration you need to
 
 2. **Connect to your EC2 instance:** Switch to the root user:
 
-    $ sudo -i
+```bash
+$ sudo -i
+```
 
 3. **Customize the php.ini:** 
 
-    $ vi /etc/php.ini
+```bash
+$ vi /etc/php.ini
+```
 
 I've added a pdf extension, set data.timezone and disabled 
 `short_open_tags`. You can do whatever you need to do.
@@ -26,16 +30,20 @@ I appreciate your feedback. Feed free to fork the repository and push your modif
 
 5. **Clean up your cli history:**
 
-    $ rm -f ~/.bash_history; history -c;
-    $ exit;
-    $ rm -f ~/.bash_history; history -c;
-    $ exit;
+```bash
+$ rm -f ~/.bash_history; history -c;
+$ exit;
+$ rm -f ~/.bash_history; history -c;
+$ exit;
+```
 
 6. **Your custom AMI is ready.** 
 Continue with step 7. from the AMI guide: [Using Custom AMIs](http://docs.amazonwebservices.com/elasticbeanstalk/latest/dg/using-features.customami.html)
 
 7. After step 10 of the Amazon guide you can connect to your new custom eb EC2 instance and watch what it going on:
 
-    $ tail -f /opt/elasticbeanstalk/var/log/hostmanager.log
+```bash
+$ tail -f /opt/elasticbeanstalk/var/log/hostmanager.log
+```
 
 That's what I've done.
